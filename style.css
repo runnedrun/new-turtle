@@ -1,6 +1,7 @@
 #turtle {
   height: 100px;
-  position: absolute
+  position: absolute;
+  bottom: 0px;
 }
 
 .turtle-cage {
