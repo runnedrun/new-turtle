@@ -2,7 +2,7 @@ var _heading = 0
 var _position = {x: 0, y: 0};
 var _actionInProgress;
 var _turtle = $("#turtle");
-var _turtleCage = $(".turtle-cage").
+var _turtleCage = $(".turtle-cage")
 
 function turnRight() {
   _heading = _heading + 90  
@@ -58,7 +58,9 @@ function insertLine(start, angle, distance) {
     "left": start.x,
     "top": start.y,
     "width": distance,
-    transform: "rotate(" + angle + "deg)"
+    height: "1px",
+    transform: "rotate(" + angle + "deg)",
+    background: "black"
   })
   
   _turtleCage.append(lineEl)
