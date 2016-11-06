@@ -60,8 +60,8 @@ function insertLine(start, angle, distance) {
     "width": distance,
     height: "1px",
     transform: "rotate(" + angle + "deg)",
-    background: "black"
-    
+    background: "black",
+    position: "absolute"
   })
   
   _turtleCage.append(lineEl)
