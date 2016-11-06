@@ -54,6 +54,6 @@ function animateRotate(angle, element) {
 
 function insertLine(start, angle, distance) {
   var lineEl = $("<div class='line'></div>")
-  lineEl.css("top
+  lineEl.css({"left": start.x, "top": start.y})
   _turtleCage.append(
 }
