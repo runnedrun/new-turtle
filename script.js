@@ -1,5 +1,5 @@
-goForward(30)
-turnLeft()
 goForward(100)
+turnLeft()
+goForward(200)
 turnRight()
 goForward(30)
