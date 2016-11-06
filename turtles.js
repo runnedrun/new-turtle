@@ -35,7 +35,6 @@ function goForward(distance) {
 
 }
 
-
 function animateRotate(angle, element) {    
   // we use a pseudo object for the animation
   // (starts from `0` to `angle`), you can name it as you want
@@ -50,4 +49,8 @@ function animateRotate(angle, element) {
       });
     }
   });
+}
+
+function insertLine(start, angle, distance) {
+  $("
 }
