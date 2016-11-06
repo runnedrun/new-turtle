@@ -1,3 +1,9 @@
 #turtle {
   height: 100px;
+  position: absolute
+}
+
+.turtle-cage {
+  height: 500px;
+  position: relative;
 }
