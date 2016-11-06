@@ -2,6 +2,7 @@ var _heading = 0
 var _position = {x: 0, y: 0};
 var _actionInProgress;
 var _turtle = $("#turtle");
+var _turtleCage = $(".turtle-cage").
 
 function turnRight() {
   _heading = _heading + 90  
@@ -52,5 +53,7 @@ function animateRotate(angle, element) {
 }
 
 function insertLine(start, angle, distance) {
-  $("
+  var lineEl = $("<div class='line'></div>")
+  lineEl.css("top
+  _turtleCage.append(
 }
