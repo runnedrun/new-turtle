@@ -6,12 +6,12 @@ var _turtleCage = $(".turtle-cage")
 
 function turnRight() {
   _heading = _heading + 90  
-  animateRotate(_heading, _turtle);
+  rotate(_heading, _turtle);
 }
 
 function turnLeft() {
   _heading = _heading - 90  
-  animateRotate(_heading, _turtle);
+  rotate(_heading, _turtle);
 }
 
 function goForward(distance) {    
@@ -36,13 +36,10 @@ function goForward(distance) {
 
 }
 
-function animateRotate(angle, element) {    
-  // we use a pseudo object for the animation
-  // (starts from `0` to `angle`), you can name it as you want
-  
-    element.css({
-      transform: 'rotate(' + now + 'deg)'
-    });    
+function rotate(angle, element) {      
+  element.css({
+    transform: 'rotate(' + angle + 'deg)'
+  });    
 }
 
 function insertLine(start, angle, distance) {
