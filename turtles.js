@@ -1,21 +1,18 @@
-var _heading = 0
-var _position = {x: 0, y: 0};
-var _actionInProgress;
-var _turtle = $("#turtle");
-var _turtleCage = $(".turtle-cage")
+var heading = 0
+var position = {x: 0, y: 0};
+var turtle = $("#turtle");
+var turtleCage = $(".turtle-cage")
 
 function turnRight() {
-  _heading = _heading + 90  
-  rotate(_heading, _turtle);
+  heading = heading + 90  
 }
 
 function turnLeft() {
-  _heading = _heading - 90  
-  rotate(_heading, _turtle);
+  heading = heading - 90  
 }
 
 function goForward(distance) {    
-  var radians = -1 * _heading * (Math.PI/180);
+  var radians = -1 * heading * (Math.PI/180);
   var yIncrement = Math.sin(radians) * distance;
   var xIncrement = Math.cos(radians) * distance;        
 
@@ -34,12 +31,6 @@ function goForward(distance) {
     }
   })
 
-}
-
-function rotate(angle, element) {      
-  element.css({
-    transform: 'rotate(' + angle + 'deg)'
-  });    
 }
 
 function insertLine(start, angle, distance) {
