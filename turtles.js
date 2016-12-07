@@ -39,17 +39,10 @@ function goForward(distance) {
 function animateRotate(angle, element) {    
   // we use a pseudo object for the animation
   // (starts from `0` to `angle`), you can name it as you want
-  $({deg: 0}).animate({deg: angle}, {
-    duration: 100,
-    step: function(now) {
-      // in the step-callback (that is fired each step of the animation),
-      // you can use the `now` paramter which contains the current
-      // animation-position (`0` up to `angle`)
-      element.css({
-        transform: 'rotate(' + now + 'deg)'
-      });
-    }
-  });
+  
+    element.css({
+      transform: 'rotate(' + now + 'deg)'
+    });    
 }
 
 function insertLine(start, angle, distance) {
