@@ -16,15 +16,15 @@ function goForward(distance) {
   var yIncrement = Math.sin(radians) * distance;
   var xIncrement = Math.cos(radians) * distance;        
 
-  var origPosition = {x: _position.x, y: _position.y}; 
-  var origHeading = _heading;
+  var origPosition = {x: position.x, y: position.y}; 
+  var origHeading = heading;
 
-  _position.x = _position.x + xIncrement;
-  _position.y = _position.y + yIncrement;
+  position.x = position.x + xIncrement;
+  position.y = position.y + yIncrement;
 
-  _turtle.animate({
-    left: _position.x, 
-    bottom: _position.y,
+  turtle.animate({
+    left: position.x, 
+    bottom: position.y,
   },{
     complete : function() {
       insertLine(origPosition, origHeading, distance)
@@ -46,5 +46,5 @@ function insertLine(start, angle, distance) {
     position: "absolute"
   })
   
-  _turtleCage.append(lineEl)
+  turtleCage.append(lineEl)
 }
